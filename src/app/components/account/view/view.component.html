@@ -1,0 +1,37 @@
+<div class="container flouid">
+    <div class="row justify-content-center">
+        <div class="form-group">
+            <button routerLink="/create" class="btn btn-primary float-right mt-2">Add</button>
+        </div>
+        <table class="table table-striped mt-2">
+            <thead class="table thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>123</td>
+                    <td>Habib</td>
+                    <td>Habib@GMAIL</td>
+                    <td>
+                        <button class="btn btn-primary" routerLink="/edit">Edit</button>|
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr *ngFor='let acc of acctList, index as i'>
+                    <td>{{acc.id}}</td>
+                    <td>{{acc.name}}</td>
+                    <td>{{acc.email}}</td>
+                    <td>
+                        <button class="btn btn-primary" (click)="edit(acc,i)" routerLink="/edit">Edit</button>|
+                        <button class="btn btn-danger" (click)="delete(acc,i)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

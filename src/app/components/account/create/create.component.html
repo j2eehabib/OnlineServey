@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <form #accountsForm (ngSubmit)="save()">
+                <div class="from_group">
+                    <label for="id">ID</label>
+                    <input [(ngModel)]="accounts.id" id="id" name="id" type="number" class="form-control" />
+                </div>
+                <div class="from_group">
+                    <label for="name">Name</label>
+                    <input [(ngModel)]="accounts.name" id="name" name="name" type="text" class="form-control" />
+                </div>
+                <div class="from_group">
+                    <label for="email">Email</label>
+                    <input [(ngModel)]="accounts.email" id="email" name="email" type="email" class="form-control" />
+                </div>
+                <div class="form_group">
+                    <button type="Submit" class="btn btn-primary mt-2" >Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
